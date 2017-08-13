@@ -35,6 +35,8 @@ int main()
   PID pid;
   
   // TODO: Initialize the pid variable.
+  // The Kp, Ki,Kd have initial value, but they will  
+  // be adjusted using twiddle in the UpdateError method
   pid.Init(0.2, 0.004, 3);
   std::cout << "init :" << "Best error" << pid.best_error << " total error " << pid.TotalError() << " P[3] " << pid.p[0] << ", " << pid.p[1] << ", " << pid.p[2] << "---" << pid.dp[0] <<  std::endl ;
 
