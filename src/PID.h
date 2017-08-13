@@ -13,9 +13,23 @@ public:
   /*
   * Coefficients
   */ 
-  double Kp;
-  double Ki;
-  double Kd;
+  //double Kp;
+  //double Ki;
+  //double Kd;
+
+  double p[3];
+
+  double prev_cte;
+  double sum;
+  double cte;
+
+  double dp[3] = {0.01, 0.1, 0.0001};
+  double best_error = 10000.0;
+
+  int currIdx = 0;
+  int step = 0;
+
+  int updateCount = 0;
 
   /*
   * Constructor
