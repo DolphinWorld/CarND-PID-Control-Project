@@ -13,17 +13,16 @@ public:
   /*
   * Coefficients
   */ 
-  //double Kp;
-  //double Ki;
-  //double Kd;
 
+  // 0 -> Kp, 1 -> Kd, 2 -> Ki
   double p[3];
 
   double prev_cte;
   double sum;
   double cte;
 
-  double dp[3] = {0.01, 0.1, 0.0001};
+   // 0 -> dKp, 1 -> dKd, 2 -> dKi
+  double dp[3] = {0.01, 0.3, 0.0001};
   double best_error = 10000.0;
 
   int currIdx = 0;
